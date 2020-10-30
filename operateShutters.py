@@ -412,7 +412,7 @@ class operateShutters(MyLog):
            status, process = commands.getstatusoutput('sudo pidof pigpiod')
            if status:  #  it wasn't running, so start it
                self.LogInfo ("pigpiod was not running")
-               commands.getstatusoutput('sudo pigpiod -l -m')  # try to  start it
+               commands.getstatusoutput('sudo pigpiod -m')  # try to  start it
                time.sleep(0.5)
                # check it again
                status, process = commands.getstatusoutput('sudo pidof pigpiod')
@@ -421,7 +421,7 @@ class operateShutters(MyLog):
            status, process = subprocess.getstatusoutput('sudo pidof pigpiod')
            if status:  #  it wasn't running, so start it
                self.LogInfo ("pigpiod was not running")
-               subprocess.getstatusoutput('sudo pigpiod -l -m')  # try to  start it
+               subprocess.getstatusoutput('sudo pigpiod -m')  # try to  start it
                time.sleep(0.5)
                # check it again
                status, process = subprocess.getstatusoutput('sudo pidof pigpiod')

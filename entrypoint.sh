@@ -11,4 +11,4 @@ if [ "$ENABLE_ECHO" = "true" ]; then
 fi
 
 
-/usr/bin/python3 -u /opt/Pi-Somfy/operateShutters.py -c /config/pi-somfy.conf -a $ARGS
+python -u /opt/Pi-Somfy/operateShutters.py -c /config/pi-somfy.conf -a $ARGS
